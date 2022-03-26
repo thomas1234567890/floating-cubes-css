@@ -1,12 +1,10 @@
-// @import "compass/css3";
-
 html,
 body {
   margin: 0;
   padding: 0;
   text-decoration: none;
   list-style: none;
-  // font-size: ;
+  font-size: 16px;
 }
 .page {
   height: 100vh;
@@ -16,8 +14,6 @@ body {
 }
 
 .cube {
-  font-size: 4em;
-  width: 2em;
   // margin: auto; //// keep blocks in the center
   transform-style: preserve-3d;
   transform: rotateX(-10deg) rotateY(20deg) rotateZ(0deg);
@@ -25,37 +21,37 @@ body {
 
 .side {
   position: absolute;
-  width: 2em;
-  height: 2em;
+  width: 8rem;
+  height: 8rem;
 
-  background: rgba(rgb(255, 99, 71), 0.6);
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  background: rgba(rgb(0, 0, 0), 0);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 
   color: white;
-  text-align: center;
-  line-height: 2em;
+  // text-align: center;
+  // line-height: 2rem;
   &:hover {
-    background: rgba(rgb(255, 55, 19), 1);
+    // background: rgba(rgb(255, 55, 19), 1);
   }
 }
 
 .front {
-  transform: translateZ(1em);
+  transform: translateZ(4rem);
 }
 .top {
-  transform: rotateX(90deg) translateZ(1em);
+  transform: rotateX(90deg) translateZ(4rem);
 }
 .right {
-  transform: rotateY(90deg) translateZ(1em);
+  transform: rotateY(90deg) translateZ(4rem);
 }
 .left {
-  transform: rotateY(-90deg) translateZ(1em);
+  transform: rotateY(-90deg) translateZ(4rem);
 }
 .bottom {
-  transform: rotateX(-90deg) translateZ(1em);
+  transform: rotateX(-90deg) translateZ(4rem);
 }
 .back {
-  transform: rotateY(-180deg) translateZ(1em);
+  transform: rotateY(-180deg) translateZ(4rem);
 }
 
 .scene {
@@ -65,17 +61,17 @@ body {
 }
 
 .scene_2 {
-  margin-top: 12em;
+  margin-top: 12rem;
   animation-delay: 1s;
 }
 
 .scene_3 {
-  margin-top: 24em;
+  margin-top: 24rem;
   animation-delay: 2s;
 }
 
 .scene_4 {
-  margin-top: 36em;
+  margin-top: 36rem;
   animation-delay: 3s;
 }
 
