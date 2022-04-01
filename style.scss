@@ -1,3 +1,22 @@
+:root {
+  --scene_animation_speed: 10s;
+  --internal_scene_rotation_speed: 10s;
+  --animation_delay: 1s;
+}
+
+///// dialog
+.optons {
+  z-index: 2;
+  position: absolute;
+  margin: 0;
+  padding: 1rem;
+  background-color: rgba($color: #000000, $alpha: 1);
+  color: #fff;
+  width: 25vw;
+  // height: 25vw;
+  bottom: 5vh;
+  right: 0;
+}
 
 .spacer {
   color: rgba($color: #000000, $alpha: 0);
@@ -12,6 +31,9 @@
   font-size: 16px;
   perspective: 1000px;
   perspective-origin: center;
+  // overflow: hidden;
+  overflow-x: hidden;
+  z-index: 1;
 }
 
 .cube {
@@ -57,30 +79,31 @@
 .scene {
   // position: absolute;
   transform-style: preserve-3d;
-  animation: scene_rotate 10s infinite linear;
+  animation: scene_rotate var(--scene_animation_speed) infinite linear;
 }
 
 .scene_2 {
   margin-top: 6rem;
-  animation-delay: 1s;
+  // animation-delay: 1s;
+  animation-delay: var(--animation_delay);
 }
 
 .scene_3 {
   margin-top: 6rem;
-  animation-delay: 2s;
+  animation-delay: calc(var(--animation_delay) * 2);
 }
 
 .scene_4 {
   margin-top: 6rem;
-  animation-delay: 3s;
+  animation-delay: calc(var(--animation_delay) * 3);
 }
 .scene_5 {
   margin-top: 6rem;
-  animation-delay: 4s;
+  animation-delay: calc(var(--animation_delay) * 4);
 }
 .scene_6 {
   margin-top: 6rem;
-  animation-delay: 5s;
+  animation-delay: calc(var(--animation_delay) * 5);
 }
 
 @keyframes scene_rotate {
@@ -93,7 +116,8 @@
 .internal_scene {
   position: absolute;
   transform-style: preserve-3d;
-  animation: scene_rotate 5s infinite linear;
+  animation: internal_scene_rotate var(--internal_scene_rotation_speed) infinite
+    linear;
 }
 .internal_cube {
   width: 2rem;
@@ -134,12 +158,6 @@
 }
 .internal_back {
   transform: rotateY(-180deg) translateZ(1rem);
-}
-
-.internal_scene {
-  // position: absolute;
-  transform-style: preserve-3d;
-  animation: internal_scene_rotate 10s infinite linear;
 }
 
 @keyframes internal_scene_rotate {
